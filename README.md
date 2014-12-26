@@ -7,8 +7,6 @@ Introduction
 Running an old version of PHP can be a little tricky without a virtual machine. Since PHP5.3 is no longer
 supported i've created this Vagrant Box to facilite the developpement of apps who need 5.3 and don't support >=5.4
 
-This box is also available at Atlas (formely VagrantCloud): https://atlas.hashicorp.com/Yadomi/boxes/apache2-php53
-
 Installation
 ------------
 
