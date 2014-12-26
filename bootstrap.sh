@@ -7,7 +7,7 @@ export LC_ALL=en_US.UTF-8
 locale-gen en_US.UTF-8 > /var/log/provision.log 2>&1
 dpkg-reconfigure locales > /var/log/provision.log 2>&1
 
-echo "Adding multiverse repositorie..." | tee -a /var/log/provision.log
+echo "Adding multiverse repository..." | tee -a /var/log/provision.log
 echo "deb http://archive.ubuntu.com/ubuntu precise universe main multiverse restricted" > /etc/apt/sources.list
 echo "deb http://security.ubuntu.com/ubuntu/ precise-security universe main multiverse restricted" >> /etc/apt/sources.list
 
