@@ -26,4 +26,4 @@ What's In The Box
 - PHP 5.3 (5.3.10-1ubuntu3.15)
 
 
-You may also take look in the `bootstrap.sh` for more informations.
+You may also take look in the [bootstrap.sh](https://github.com/yadomi/apache2-php53/blob/master/bootstrap.sh) for more informations.
