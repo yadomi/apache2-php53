@@ -34,6 +34,7 @@ apt-get -y install php5-mysql php5-memcached php5-geoip php5-gd php5-mcrypt 2>&1
 
 echo "#6 Tidying up..." | tee -a /var/log/provision.log
 chmod -R 600 /etc/update-motd.d/*
+apt-get -y remove cloud-init 2>&1 >> /var/log/provision.log
 
 echo "#7 Provision done, machine ready." | tee -a /var/log/provision.log
 echo -e "IP: \c" && ifconfig eth1 | grep "inet " | cut -d ':' -f2 | awk '{print $1}'
