@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+echo "Generating locale..." | tee -a /var/log/provision.log
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+locale-gen en_US.UTF-8 > /var/log/provision.log 2>&1
+dpkg-reconfigure locales > /var/log/provision.log 2>&1
+
 echo "Adding multiverse repositorie..." | tee -a /var/log/provision.log
 echo "deb http://archive.ubuntu.com/ubuntu precise universe main multiverse restricted" > /etc/apt/sources.list
 echo "deb http://security.ubuntu.com/ubuntu/ precise-security universe main multiverse restricted" >> /etc/apt/sources.list
@@ -25,10 +32,6 @@ fi
 
 echo "Installing PHP Extensions..." | tee -a /var/log/provision.log
 apt-get -y install php5-mysql php5-memcached php5-geoip php5-gd php5-mcrypt 2>&1 >> /var/log/provision.log
-
-echo "Generating locale..." | tee -a /var/log/provision.log
-apt-get -y install language-pack-fr 2>&1 > /var/log/provision.log
-locale-gen fr_FR.UTF-8 2>&1 >> /var/log/provision.log
 
 echo "Tidying up..." | tee -a /var/log/provision.log
 chmod -R 600 /etc/update-motd.d/*
