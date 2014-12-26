@@ -1,4 +1,4 @@
-Vagrant Box for Apache2 and PHP53
+Vagrant Box for Apache2 and PHP5.3
 =================================
 
 Introduction
