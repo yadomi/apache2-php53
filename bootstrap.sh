@@ -33,6 +33,11 @@ fi
 echo "-> Installing PHP Extensions..." | tee -a /var/log/provision.log
 apt-get -y install php5-mysql php5-memcached php5-geoip php5-gd php5-mcrypt 2>&1 >> /var/log/provision.log
 
+# echo "-> Installing MySQL..." | tee -a /var/log/provision.log
+# echo "mysql-server mysql-server/root_password password root" | debconf-set-selections
+# echo "mysql-server mysql-server/root_password_again password root" | debconf-set-selections
+# apt-get -y install mysql-server > /var/log/provision.log 2>&1
+
 echo "-> Tidying up..." | tee -a /var/log/provision.log
 chmod -R 600 /etc/update-motd.d/*
 apt-get -y remove cloud-init 2>&1 >> /var/log/provision.log
