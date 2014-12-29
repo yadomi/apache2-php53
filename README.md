@@ -1,5 +1,5 @@
 Vagrant Box for Apache2 and PHP5.3
-=================================
+==================================
 
 Introduction
 ------------
@@ -23,6 +23,6 @@ What's In The Box
 - Apache2 (2.2.22)
 - PHP 5.3 (5.3.10-1ubuntu3.15)
 
-MySQL 5.5 is not installed by default. You can enabled by uncomment the lines in [bootstrap.sh](https://github.com/yadomi/apache2-php53/blob/master/bootstrap.sh)
+MySQL 5.5 is not installed by default. You can enabled it by uncomment some lines in [bootstrap.sh](https://github.com/yadomi/apache2-php53/blob/master/bootstrap.sh)
 
-You may also take look in the [bootstrap.sh](https://github.com/yadomi/apache2-php53/blob/master/bootstrap.sh) for more informations.
+You may also take look in the [bootstrap.sh](https://github.com/yadomi/apache2-php53/blob/master/bootstrap.sh) for more informations about how packages are installed
